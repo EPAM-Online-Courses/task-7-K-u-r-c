@@ -33,7 +33,7 @@ public class JsonDemoApplication {
     final ProductDTO product = new ProductDTO();
     product.setId(Math.abs(secureRandom.nextLong()));
     product.setPrice(new BigDecimal(secureRandom.nextInt(1000)).multiply(BigDecimal.TEN)
-        .setScale(2, RoundingMode.HALF_UP));
+            .setScale(2, RoundingMode.HALF_UP));
     product.setProductionDate(Date.from(Instant.now()));
     product.setExpiryDate(java.util.Date.from(Instant.now().plus(30, ChronoUnit.DAYS)));
     String randomString = getRandomString(secureRandom);
